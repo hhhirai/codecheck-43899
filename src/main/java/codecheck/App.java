@@ -1,5 +1,6 @@
 package codecheck;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,9 +20,8 @@ public class App {
 
 			in_map.put(point, cost);
 		}
-		in_map.entrySet().stream()
-		.sorted(java.util.Collections.reverseOrder(java.util.Map.Entry.comparingByKey()));
-
+		Object[] mapkey = in_map.keySet().toArray();
+        Arrays.sort(mapkey);
 		System.out.println(in_map);
 
 	}
